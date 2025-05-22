@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sophia Tech Labs Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="logo-container"></div>
+            <img src="images/Company logo.png.jpg" alt="Sophia Tech Labs Logo" class="company-logo">
+            <h1 class="brand-title">SOPHIA TECH LABS</h1>
+            <nav>
+                <ul>
+                    <div class="dropdown">
+                        <button class="dropdown-btn">
+                            <i class="fas fa-tachometer-alt"></i> Dashboard ▾
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#"><i class="fas fa-users"></i> Users</a>
+                            <a href="#"><i class="fas fa-calendar-check"></i> Attendance</a>
+                            <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                            <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                </ul>
+            </nav>
+            <button id="toggleSidebar">☰</button>
+        </aside>
+
+        <main class="main-content">
+            <div class="top-nav">
+                <button id="toggleSidebarMain" class="toggle-btn">☰ Menu</button>
+            </div>
+            <section class="summary-cards">
+                <div class="card card-blue">
+                    <i class="fas fa-users card-icon"></i>
+                    <div>
+                        <h3>Total Users</h3>
+                        <p id="totalUsers">0</p>
+                    </div>
+                </div>
+
+                <div class="card card-green">
+                    <i class="fas fa-user-check card-icon"></i>
+                    <div>
+                        <h3>Active</h3>
+                        <p id="activeUsers">0</p>
+                    </div>
+                </div>
+
+                <div class="card card-orange">
+                    <i class="fas fa-user-clock card-icon"></i>
+                    <div>
+                        <h3>Pending</h3>
+                        <p id="pendingUsers">0</p>
+                    </div>
+                </div>
+
+                <div class="card card-red">
+                    <i class="fas fa-user-slash card-icon"></i>
+                    <div>
+                        <h3>Inactive</h3>
+                        <p id="inactiveUsers">0</p>
+                    </div>
+                </div>
+            </section>
+
+            <header class="navbar">
+                <h1>Dashboard</h1>
+                <div class="user-info">Welcome, Admin</div>
+                <button id="logoutBtn" class="logout-btn">Logout</button>
+            </header>
+
+            <section class="cards">
+                <div class="card">📊 Reports</div>
+                <div class="card">👥 Users</div>
+                <div class="card">⚙️ Settings</div>
+            </section>
+            <button id="exportBtn" class="export-btn">
+                <i class="fas fa-file-csv"></i> Export to CSV
+            </button>
+            <section class="table-section">
+                <h2>User List</h2>
+                <input type="text" id="tableSearch" placeholder="Search users..." class="search-box" />
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th data-column="0">#</th>
+                            <th data-column="1">Name</th>
+                            <th data-column="2">Email</th>
+                            <th data-column="3">XP</th>
+                            <th data-column="4">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userTableBody">
+                        <!-- JavaScript will populate rows here -->
+                    </tbody>
+                </table>
+                <!-- Modal -->
+                <div id="userModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-button">&times;</span>
+                        <h2>User Details</h2>
+                        <p><strong>Name:</strong> <span id="modalName"></span></p>
+                        <p><strong>Email:</strong> <span id="modalEmail"></span></p>
+                        <p><strong>XP:</strong><span id="modalXP"></span></p>
+                        <p><strong>Status:</strong> <span id="modalStatus"></span></p>
+                    </div>
+                </div>
+                <div class="pagination" id="pagination"></div>
+            </section>
+        </main>
+    </div>
+    <div class="top-bar-mobile">
+        <button id="toggleSidebarMobile" class="toggle-btn">☰</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

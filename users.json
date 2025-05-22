@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Jane Doe",
+    "email": "jane@sophialabs.com",
+    "XP": "360",
+    "status": "Active"
+  },
+  {
+    "id": 2,
+    "name": "John Smith",
+    "email": "john@sophialabs.com",
+    "XP": "660",
+    "status": "Pending"
+  },
+  {
+    "id": 3,
+    "name": "Mary Johnson",
+    "email": "mary@sophialabs.com",
+    "XP": "560",
+    "status": "Inactive"
+  },
+  {
+    "id": 4,
+    "name": "Alex Brown",
+    "email": "alex@sophialabs.com",
+    "XP": "460",
+    "status": "Active"
+  },
+  {
+    "id": 5,
+    "name": "Chloe White",
+    "email": "chloe@sophialabs.com",
+    "XP": "260",
+    "status": "Pending"
+  },
+  {
+    "id": 6,
+    "name": "Daniel Green",
+    "email": "daniel@sophialabs.com",
+    "XP": "860",
+    "status": "Active"
+  }
+]
