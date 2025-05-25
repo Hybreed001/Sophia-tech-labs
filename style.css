@@ -577,8 +577,8 @@ body.sidebar-collapsed .toggle-btn {
 }
 
 .company-logo {
-    width: 160px;
-    height: 160px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
@@ -592,4 +592,38 @@ body.sidebar-collapsed .toggle-btn {
 .logo-container {
     text-align: center;
     margin-bottom: 20px;
+}
+
+.settings-section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    max-width: 500px;
+}
+
+.settings-section h3 {
+    margin-bottom: 10px;
+}
+
+.settings-section input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.settings-section button {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.settings-section button:hover {
+    background-color: #1a252f;
 }

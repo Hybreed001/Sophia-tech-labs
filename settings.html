@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings | Sophia Tech Labs</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+    <div class="sidebar">
+        <!-- Same sidebar HTML you used in index.html -->
+        <!-- Add link to settings page as 'active' -->
+        <a href="index.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+        <a href="users.html"><i class="fas fa-users"></i> Users</a>
+        <a href="attendance.html"><i class="fas fa-calendar-alt"></i> Attendance</a>
+        <a href="settings.html" class="active"><i class="fas fa-cog"></i> Settings</a>
+        <a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </div>
+
+    <div class="main-content">
+        <h1>Settings</h1>
+        <p>Here you can manage your account settings and system preferences.</p>
+
+        <!-- Sample setting section -->
+        <div class="settings-section">
+            <h3>Change Email</h3>
+            <input type="email" placeholder="Enter new email">
+            <button>Update Email</button>
+        </div>
+
+        <div class="settings-section">
+            <h3>Change Password</h3>
+            <input type="password" placeholder="New password">
+            <input type="password" placeholder="Confirm new password">
+            <button>Update Password</button>
+        </div>
+    </div>
+
+    <script>
+        // Logout logic
+        function logout() {
+            localStorage.removeItem('loggedIn');
+            window.location.href = 'login.html';
+        }
+
+        // Redirect if not logged in
+        if (localStorage.getItem('loggedIn') !== 'true') {
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+
+</html>
